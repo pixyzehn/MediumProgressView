@@ -15,7 +15,7 @@ Move MediumProgressView directory (including MediumProgressView.swift and Medium
 
 ## Description
 
-You can set the certain property. For example, position and color, height, duration and so on. If you don't set the these property, Default value is used.
+You can set the certain property. For example, position and color, height, duration and so on. If you don't set the these property, default value is used.
 
 ```Swift
 var mediumProgressViewManager = MediumProgressViewManager.sharedInstance
@@ -27,13 +27,13 @@ mediumProgressViewManager?.isLeft   = true // Default is true.
 mediumProgressViewManager?.duration = 1.0  // Default is 1.2.
 ```
 
-This is show method.
+The following method is show method.
 
 ```Swift
 mediumProgressViewManager.showProgressOnView(view)
 ```
 
-This is hide method.
+The following method is hide method.
 
 ```Swift
 mediumProgressViewManager.hideProgressView()
