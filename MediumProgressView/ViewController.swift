@@ -12,14 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        var mediumProgressViewManager      = MediumProgressViewManager.sharedInstance
+        mediumProgressViewManager.position = .Bottom // Default is top.
+        mediumProgressViewManager.color    = MEDIUM_PROGRESS_COLOR // Default is UIColor(red:0.33, green:0.83, blue:0.44, alpha:1).
+        mediumProgressViewManager.duration = 1.0  // Default is 1.2.
+        mediumProgressViewManager.isLeft   = true // Default is true.
+        mediumProgressViewManager.height   = 4.0 // Defauls is 4.0.
+        mediumProgressViewManager.showProgressOnView(view)
     }
-
 
 }
-
