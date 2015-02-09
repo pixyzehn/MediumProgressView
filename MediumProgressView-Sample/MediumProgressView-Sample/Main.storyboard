@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gcf-TB-Dkh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="oWT-Og-qDW">
+            <objects>
+                <viewController id="gcf-TB-Dkh" customClass="ViewController" customModule="MediumProgressView_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VRf-O7-eLd"/>
+                        <viewControllerLayoutGuide type="bottom" id="P8k-rO-J7g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DDd-fw-8l5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fau-ny-pQf">
+                                <rect key="frame" x="250" y="310" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.83137254900000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JhI-Bv-sUL"/>
+                                    <constraint firstAttribute="height" constant="40" id="mRi-oK-LaJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startProgress:" destination="gcf-TB-Dkh" eventType="touchUpInside" id="6l8-kX-nn6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ag-S2-jXb">
+                                <rect key="frame" x="250" y="408" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.83137254900000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SUl-8T-BMw"/>
+                                    <constraint firstAttribute="width" constant="100" id="zlr-BJ-D9n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopProgress:" destination="gcf-TB-Dkh" eventType="touchUpInside" id="Jwq-aR-p26"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="2ag-S2-jXb" secondAttribute="centerX" id="3ok-ew-e8V"/>
+                            <constraint firstItem="Fau-ny-pQf" firstAttribute="top" secondItem="VRf-O7-eLd" secondAttribute="bottom" constant="290" id="5GT-oI-wm2"/>
+                            <constraint firstItem="2ag-S2-jXb" firstAttribute="top" secondItem="Fau-ny-pQf" secondAttribute="bottom" constant="58" id="WRP-ja-vSB"/>
+                            <constraint firstAttribute="centerX" secondItem="Fau-ny-pQf" secondAttribute="centerX" id="rpK-jC-YhJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mZ-QJ-J5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="276"/>
+        </scene>
+    </scenes>
+</document>

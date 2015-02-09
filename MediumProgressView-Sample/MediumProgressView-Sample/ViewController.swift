@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MediumProgressView
+//  MediumProgressView-Sample
 //
 //  Created by pixyzehn on 2/9/15.
 //  Copyright (c) 2015 pixyzehn. All rights reserved.
@@ -14,13 +14,13 @@ class ViewController: UIViewController {
         case Moving
         case Stop
     }
-    
+
     var mediumProgressViewManager: MediumProgressViewManager?
     var status: Motion?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         mediumProgressViewManager = MediumProgressViewManager.sharedInstance
         mediumProgressViewManager?.position = .Top // Default is top.
         mediumProgressViewManager?.color    = MEDIUM_PROGRESS_COLOR // Default is UIColor(red:0.33, green:0.83, blue:0.44, alpha:1).
@@ -31,19 +31,20 @@ class ViewController: UIViewController {
         status = .Moving
         mediumProgressViewManager?.showProgressOnView(view)
     }
-
+    
     @IBAction func startProgress(sender: AnyObject) {
         if status == .Stop {
             mediumProgressViewManager?.showProgressOnView(view)
             status = .Moving
         }
     }
-    
+
     @IBAction func stopProgress(sender: AnyObject) {
         if status == .Moving {
             mediumProgressViewManager?.hideProgressView()
             status = .Stop
         }
     }
-
+    
 }
+

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MediumProgressView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1o-xi-n97">
+                                <rect key="frame" x="250" y="263" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.32941176470588235" green="0.83137254901960778" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pta-og-nR8"/>
+                                    <constraint firstAttribute="width" constant="100" id="iDx-bh-BQl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startProgress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lBR-WF-UwR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmI-5W-Ulh">
+                                <rect key="frame" x="250" y="345" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.83137254900000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EJJ-SO-27b"/>
+                                    <constraint firstAttribute="width" constant="100" id="U8e-MW-xJN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopProgress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w8u-pG-pfR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vmI-5W-Ulh" firstAttribute="top" secondItem="C1o-xi-n97" secondAttribute="bottom" constant="42" id="21m-sz-U8g"/>
+                            <constraint firstAttribute="centerX" secondItem="C1o-xi-n97" secondAttribute="centerX" id="74i-F3-Snd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vmI-5W-Ulh" secondAttribute="bottom" constant="215" id="9rG-NI-kmM"/>
+                            <constraint firstAttribute="centerX" secondItem="vmI-5W-Ulh" secondAttribute="centerX" id="KBp-Pp-OU9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vmI-5W-Ulh" secondAttribute="trailing" constant="234" id="RcW-uA-X8a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C1o-xi-n97" secondAttribute="trailing" constant="234" id="Wgg-Nb-ZAD"/>
+                            <constraint firstItem="C1o-xi-n97" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="234" id="je1-r7-pFt"/>
+                            <constraint firstItem="C1o-xi-n97" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="243" id="oRH-2v-iOY"/>
+                            <constraint firstItem="vmI-5W-Ulh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="234" id="wUn-2I-Zfw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Wgg-Nb-ZAD"/>
+                                <exclude reference="je1-r7-pFt"/>
+                                <exclude reference="RcW-uA-X8a"/>
+                                <exclude reference="wUn-2I-Zfw"/>
+                                <exclude reference="9rG-NI-kmM"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
