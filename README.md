@@ -9,9 +9,15 @@ Inspired by [KIProgressView](https://github.com/kaiinui/KIProgressView). I made 
 
 ![MediumProgressView](https://github.com/pixyzehn/MediumProgressView/blob/master/Assets/MediumProgressView.gif)
 
-## Install
+##Installation
 
-Move MediumProgressView directory (including MediumProgressView.swift and MediumProgressViewManager.swift) into your project.
+The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Add the following line to your Podfile:
+
+```ruby
+use_frameworks!
+# The following is a Library of Swift.
+pod 'MediumProgressView'
+```
 
 ## Description
 
