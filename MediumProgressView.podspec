@@ -8,7 +8,6 @@ s.author = { "Nagasawa Hiroki" => "civokjots10.pico@gmail.com" }
 
 s.requires_arc = true
 s.ios.deployment_target = "8.0"
-s.platform = :ios, "8.0"
 s.source = { :git => "https://github.com/pixyzehn/MediumProgressView.git", :tag => "#{s.version}" }
 s.source_files = "MediumProgressView/*.swift"
 end
