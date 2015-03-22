@@ -8,34 +8,34 @@
 
 import UIKit
 
-let MEDIUM_PROGRESS_COLOR = UIColor(red:0.33, green:0.83, blue:0.44, alpha:1)
+public let MEDIUM_PROGRESS_COLOR = UIColor(red:0.33, green:0.83, blue:0.44, alpha:1)
 
-class MediumProgressViewManager {
+public class MediumProgressViewManager {
     
-    enum Position {
+    public enum Position {
         case Top
         case Bottom
     }
         
-    var position: Position?
-    var color: UIColor?
-    var height: CGFloat?
-    var isLeft: Bool             = true
-    var duration: CFTimeInterval = 1.2
+    public var position: Position?
+    public var color: UIColor?
+    public var height: CGFloat?
+    public var isLeft: Bool             = true
+    public var duration: CFTimeInterval = 1.2
     
-    var progressView: MediumProgressView?
+    public var progressView: MediumProgressView?
     
-    init() {
+    public init() {
        initialize()
     }
     
-    func initialize() {
+    public func initialize() {
         self.position = .Top
         self.color    = MEDIUM_PROGRESS_COLOR
         self.height   = 4.0
     }
     
-    class var sharedInstance: MediumProgressViewManager {
+    public class var sharedInstance: MediumProgressViewManager {
         struct Static {
             static let instance: MediumProgressViewManager = MediumProgressViewManager()
         }
@@ -44,12 +44,12 @@ class MediumProgressViewManager {
 
     // Internal function
     
-    internal func showProgressOnView(view: UIView) {
+    public func showProgressOnView(view: UIView) {
         progressView = initializeProgressViewWithFrame(view.frame)
         view.addSubview(progressView!)
     }
     
-    internal func hideProgressView() {
+    public func hideProgressView() {
         progressView?.removeFromSuperview()
     }
     

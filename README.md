@@ -14,9 +14,16 @@ Inspired by [KIProgressView](https://github.com/kaiinui/KIProgressView). I made 
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Add the following line to your Podfile:
 
 ```ruby
+platform :ios, '8.0'
 use_frameworks!
 # The following is a Library of Swift.
 pod 'MediumProgressView'
+```
+
+Then, run the following command:
+
+```ruby
+pod install
 ```
 
 ## Description
@@ -26,7 +33,7 @@ You can set the certain property. For example, position and color, height, durat
 ```Swift
 var mediumProgressViewManager = MediumProgressViewManager.sharedInstance
 mediumProgressViewManager.position = .Top // Default is top.
-mediumProgressViewManager?.color    = MEDIUM_PROGRESS_COLOR 
+mediumProgressViewManager?.color    = MEDIUM_PROGRESS_COLOR
 // Default is UIColor(red:0.33, green:0.83, blue:0.44, alpha:1).
 mediumProgressViewManager?.height   = 4.0 // Default is 4.0.
 mediumProgressViewManager?.isLeft   = true // Default is true.
