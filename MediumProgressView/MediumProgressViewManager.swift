@@ -42,7 +42,7 @@ public class MediumProgressViewManager {
         return Static.instance
     }
 
-    // Internal function
+    // MARK: Internal function
     
     public func showProgressOnView(view: UIView) {
         progressView = initializeProgressViewWithFrame(view.frame)
@@ -53,7 +53,7 @@ public class MediumProgressViewManager {
         progressView?.removeFromSuperview()
     }
     
-    // Helpers
+    // MARK: Helpers
     
     func initializeProgressViewWithFrame(aFrame: CGRect) -> MediumProgressView {
         let aWidth = aFrame.size.width
