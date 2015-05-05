@@ -13,6 +13,13 @@
 		6E08A7A31A88E8B200F6093C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E08A7A11A88E8B200F6093C /* LaunchScreen.xib */; };
 		6E08A7AF1A88E8B200F6093C /* MediumProgressView_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E08A7AE1A88E8B200F6093C /* MediumProgressView_SampleTests.swift */; };
 		6E08A7C01A88EA1800F6093C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E08A7BF1A88EA1800F6093C /* Main.storyboard */; };
+		6EB8CCB01AF88619002EB5DD /* MediumProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB8CCAF1AF88619002EB5DD /* MediumProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EB8CCB61AF88619002EB5DD /* MediumProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB8CCAB1AF88619002EB5DD /* MediumProgressView.framework */; };
+		6EB8CCBF1AF88619002EB5DD /* MediumProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8CCBE1AF88619002EB5DD /* MediumProgressViewTests.swift */; };
+		6EB8CCC21AF88619002EB5DD /* MediumProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB8CCAB1AF88619002EB5DD /* MediumProgressView.framework */; };
+		6EB8CCC31AF88619002EB5DD /* MediumProgressView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB8CCAB1AF88619002EB5DD /* MediumProgressView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EB8CCCB1AF88630002EB5DD /* MediumProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE89E231AB6EB420030119A /* MediumProgressView.swift */; };
+		6EB8CCCC1AF88630002EB5DD /* MediumProgressViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE89E241AB6EB420030119A /* MediumProgressViewManager.swift */; };
 		6EE89E251AB6EB420030119A /* MediumProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE89E231AB6EB420030119A /* MediumProgressView.swift */; };
 		6EE89E261AB6EB420030119A /* MediumProgressViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE89E241AB6EB420030119A /* MediumProgressViewManager.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +32,42 @@
 			remoteGlobalIDString = 6E08A7921A88E8B200F6093C;
 			remoteInfo = "MediumProgressView-Sample";
 		};
+		6EB8CCB71AF88619002EB5DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E08A78B1A88E8B100F6093C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EB8CCAA1AF88619002EB5DD;
+			remoteInfo = MediumProgressView;
+		};
+		6EB8CCB91AF88619002EB5DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E08A78B1A88E8B100F6093C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E08A7921A88E8B200F6093C;
+			remoteInfo = "MediumProgressView-Sample";
+		};
+		6EB8CCC01AF88619002EB5DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E08A78B1A88E8B100F6093C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EB8CCAA1AF88619002EB5DD;
+			remoteInfo = MediumProgressView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6EB8CCC91AF88619002EB5DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6EB8CCC31AF88619002EB5DD /* MediumProgressView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6E08A7931A88E8B200F6093C /* MediumProgressView-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediumProgressView-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +80,12 @@
 		6E08A7AD1A88E8B200F6093C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E08A7AE1A88E8B200F6093C /* MediumProgressView_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumProgressView_SampleTests.swift; sourceTree = "<group>"; };
 		6E08A7BF1A88EA1800F6093C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6EB8CCAB1AF88619002EB5DD /* MediumProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MediumProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB8CCAE1AF88619002EB5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EB8CCAF1AF88619002EB5DD /* MediumProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediumProgressView.h; sourceTree = "<group>"; };
+		6EB8CCB51AF88619002EB5DD /* MediumProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediumProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB8CCBD1AF88619002EB5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EB8CCBE1AF88619002EB5DD /* MediumProgressViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumProgressViewTests.swift; sourceTree = "<group>"; };
 		6EE89E231AB6EB420030119A /* MediumProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediumProgressView.swift; path = ../../MediumProgressView/MediumProgressView.swift; sourceTree = "<group>"; };
 		6EE89E241AB6EB420030119A /* MediumProgressViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MediumProgressViewManager.swift; path = ../../MediumProgressView/MediumProgressViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB8CCC21AF88619002EB5DD /* MediumProgressView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +103,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB8CCA71AF88619002EB5DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB8CCB21AF88619002EB5DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB8CCB61AF88619002EB5DD /* MediumProgressView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +129,8 @@
 			children = (
 				6E08A7951A88E8B200F6093C /* MediumProgressView-Sample */,
 				6E08A7AB1A88E8B200F6093C /* MediumProgressView-SampleTests */,
+				6EB8CCAC1AF88619002EB5DD /* MediumProgressView */,
+				6EB8CCBB1AF88619002EB5DD /* MediumProgressViewTests */,
 				6E08A7941A88E8B200F6093C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +140,8 @@
 			children = (
 				6E08A7931A88E8B200F6093C /* MediumProgressView-Sample.app */,
 				6E08A7A81A88E8B200F6093C /* MediumProgressView-SampleTests.xctest */,
+				6EB8CCAB1AF88619002EB5DD /* MediumProgressView.framework */,
+				6EB8CCB51AF88619002EB5DD /* MediumProgressViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +185,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6EB8CCAC1AF88619002EB5DD /* MediumProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				6EB8CCAF1AF88619002EB5DD /* MediumProgressView.h */,
+				6EB8CCAD1AF88619002EB5DD /* Supporting Files */,
+			);
+			path = MediumProgressView;
+			sourceTree = "<group>";
+		};
+		6EB8CCAD1AF88619002EB5DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EB8CCAE1AF88619002EB5DD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EB8CCBB1AF88619002EB5DD /* MediumProgressViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EB8CCBE1AF88619002EB5DD /* MediumProgressViewTests.swift */,
+				6EB8CCBC1AF88619002EB5DD /* Supporting Files */,
+			);
+			path = MediumProgressViewTests;
+			sourceTree = "<group>";
+		};
+		6EB8CCBC1AF88619002EB5DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EB8CCBD1AF88619002EB5DD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6EE89E271AB6EB4D0030119A /* MediumProgressView */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +230,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		6EB8CCA81AF88619002EB5DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB8CCB01AF88619002EB5DD /* MediumProgressView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		6E08A7921A88E8B200F6093C /* MediumProgressView-Sample */ = {
 			isa = PBXNativeTarget;
@@ -136,10 +249,12 @@
 				6E08A78F1A88E8B200F6093C /* Sources */,
 				6E08A7901A88E8B200F6093C /* Frameworks */,
 				6E08A7911A88E8B200F6093C /* Resources */,
+				6EB8CCC91AF88619002EB5DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6EB8CCC11AF88619002EB5DD /* PBXTargetDependency */,
 			);
 			name = "MediumProgressView-Sample";
 			productName = "MediumProgressView-Sample";
@@ -164,6 +279,43 @@
 			productReference = 6E08A7A81A88E8B200F6093C /* MediumProgressView-SampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6EB8CCAA1AF88619002EB5DD /* MediumProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EB8CCC81AF88619002EB5DD /* Build configuration list for PBXNativeTarget "MediumProgressView" */;
+			buildPhases = (
+				6EB8CCA61AF88619002EB5DD /* Sources */,
+				6EB8CCA71AF88619002EB5DD /* Frameworks */,
+				6EB8CCA81AF88619002EB5DD /* Headers */,
+				6EB8CCA91AF88619002EB5DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediumProgressView;
+			productName = MediumProgressView;
+			productReference = 6EB8CCAB1AF88619002EB5DD /* MediumProgressView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6EB8CCB41AF88619002EB5DD /* MediumProgressViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EB8CCCA1AF88619002EB5DD /* Build configuration list for PBXNativeTarget "MediumProgressViewTests" */;
+			buildPhases = (
+				6EB8CCB11AF88619002EB5DD /* Sources */,
+				6EB8CCB21AF88619002EB5DD /* Frameworks */,
+				6EB8CCB31AF88619002EB5DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EB8CCB81AF88619002EB5DD /* PBXTargetDependency */,
+				6EB8CCBA1AF88619002EB5DD /* PBXTargetDependency */,
+			);
+			name = MediumProgressViewTests;
+			productName = MediumProgressViewTests;
+			productReference = 6EB8CCB51AF88619002EB5DD /* MediumProgressViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -178,6 +330,13 @@
 					};
 					6E08A7A71A88E8B200F6093C = {
 						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 6E08A7921A88E8B200F6093C;
+					};
+					6EB8CCAA1AF88619002EB5DD = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					6EB8CCB41AF88619002EB5DD = {
+						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 6E08A7921A88E8B200F6093C;
 					};
 				};
@@ -197,6 +356,8 @@
 			targets = (
 				6E08A7921A88E8B200F6093C /* MediumProgressView-Sample */,
 				6E08A7A71A88E8B200F6093C /* MediumProgressView-SampleTests */,
+				6EB8CCAA1AF88619002EB5DD /* MediumProgressView */,
+				6EB8CCB41AF88619002EB5DD /* MediumProgressViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,6 +374,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6E08A7A61A88E8B200F6093C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB8CCA91AF88619002EB5DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB8CCB31AF88619002EB5DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,6 +416,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EB8CCA61AF88619002EB5DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB8CCCB1AF88630002EB5DD /* MediumProgressView.swift in Sources */,
+				6EB8CCCC1AF88630002EB5DD /* MediumProgressViewManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB8CCB11AF88619002EB5DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB8CCBF1AF88619002EB5DD /* MediumProgressViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -248,6 +440,21 @@
 			isa = PBXTargetDependency;
 			target = 6E08A7921A88E8B200F6093C /* MediumProgressView-Sample */;
 			targetProxy = 6E08A7A91A88E8B200F6093C /* PBXContainerItemProxy */;
+		};
+		6EB8CCB81AF88619002EB5DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EB8CCAA1AF88619002EB5DD /* MediumProgressView */;
+			targetProxy = 6EB8CCB71AF88619002EB5DD /* PBXContainerItemProxy */;
+		};
+		6EB8CCBA1AF88619002EB5DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E08A7921A88E8B200F6093C /* MediumProgressView-Sample */;
+			targetProxy = 6EB8CCB91AF88619002EB5DD /* PBXContainerItemProxy */;
+		};
+		6EB8CCC11AF88619002EB5DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EB8CCAA1AF88619002EB5DD /* MediumProgressView */;
+			targetProxy = 6EB8CCC01AF88619002EB5DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -394,6 +601,86 @@
 			};
 			name = Release;
 		};
+		6EB8CCC41AF88619002EB5DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MediumProgressView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6EB8CCC51AF88619002EB5DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MediumProgressView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6EB8CCC61AF88619002EB5DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MediumProgressViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediumProgressView-Sample.app/MediumProgressView-Sample";
+			};
+			name = Debug;
+		};
+		6EB8CCC71AF88619002EB5DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MediumProgressViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediumProgressView-Sample.app/MediumProgressView-Sample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +710,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6EB8CCC81AF88619002EB5DD /* Build configuration list for PBXNativeTarget "MediumProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EB8CCC41AF88619002EB5DD /* Debug */,
+				6EB8CCC51AF88619002EB5DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6EB8CCCA1AF88619002EB5DD /* Build configuration list for PBXNativeTarget "MediumProgressViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EB8CCC61AF88619002EB5DD /* Debug */,
+				6EB8CCC71AF88619002EB5DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
