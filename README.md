@@ -11,6 +11,8 @@ Inspired by [KIProgressView](https://github.com/kaiinui/KIProgressView). I made 
 
 ##Installation
 
+###Cocoapods
+
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Add the following line to your Podfile:
 
 ```ruby
@@ -25,6 +27,32 @@ Then, run the following command:
 ```ruby
 pod install
 ```
+
+###Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate MediumProgressView into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "pixyzehn/MediumProgressView"
+```
+
+Run `carthage update`.
+
+```bash
+$ carthage update
+```
+###Other
+
+Add the MediumProgressView (including MediumProgressView.swift and  MediumProgressViewManager.swift) folder into your project.
 
 ## Description
 
