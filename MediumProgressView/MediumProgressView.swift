@@ -14,27 +14,26 @@ public class MediumProgressView: UIView {
         super.init(frame: frame)
     }
  
-    convenience public init(frame: CGRect, isLeft: Bool, duration: CFTimeInterval) {
+    convenience public init(frame: CGRect, isLeftToRight: Bool, duration: CFTimeInterval) {
         self.init(frame: frame)
-        initialize(isLeft, duration: duration)
+        initialize(isLeftToRight, duration: duration)
     }
 
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
  
-    public func initialize(isLeft: Bool, duration: CFTimeInterval) {
-        layer.addAnimation(mediumProgressAnimation(isLeft, duration: duration), forKey: "animation")
+    private func initialize(isLeftToRight: Bool, duration: CFTimeInterval) {
+        layer.addAnimation(mediumProgressAnimation(isLeftToRight, duration: duration), forKey: "animation")
     }
 
-    public func mediumProgressAnimation(isLeft: Bool, duration: CFTimeInterval) -> CAAnimation {
-        var animation: CABasicAnimation = CABasicAnimation(keyPath: "position.x")
-        animation.fromValue   = isLeft ? -frame.size.width : frame.size.width * 2
-        animation.toValue     = isLeft ? frame.size.width * 2 : -frame.size.width
+    private func mediumProgressAnimation(isLeftToRight: Bool, duration: CFTimeInterval) -> CAAnimation {
+        let animation: CABasicAnimation = CABasicAnimation(keyPath: "position.x")
+        animation.fromValue   = isLeftToRight ? -frame.size.width : frame.size.width * 2
+        animation.toValue     = isLeftToRight ? frame.size.width * 2 : -frame.size.width
         animation.duration    = duration
         animation.fillMode    = kCAFillModeBoth
         animation.repeatCount = Float.infinity
         return animation
-    }
-    
+    } 
 }

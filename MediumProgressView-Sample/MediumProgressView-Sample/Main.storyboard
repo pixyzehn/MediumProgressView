@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gcf-TB-Dkh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vAc-L5-dXH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fau-ny-pQf">
-                                <rect key="frame" x="250" y="310" width="100" height="40"/>
+                                <rect key="frame" x="225" y="310" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.3294117647" green="0.83137254900000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="JhI-Bv-sUL"/>
+                                    <constraint firstAttribute="width" constant="150" id="JhI-Bv-sUL"/>
                                     <constraint firstAttribute="height" constant="40" id="mRi-oK-LaJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,13 +33,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ag-S2-jXb">
-                                <rect key="frame" x="250" y="408" width="100" height="40"/>
+                                <rect key="frame" x="225" y="408" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.3294117647" green="0.83137254900000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="SUl-8T-BMw"/>
-                                    <constraint firstAttribute="width" constant="100" id="zlr-BJ-D9n"/>
+                                    <constraint firstAttribute="width" constant="150" id="zlr-BJ-D9n"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,15 +52,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="2ag-S2-jXb" secondAttribute="centerX" id="3ok-ew-e8V"/>
-                            <constraint firstItem="Fau-ny-pQf" firstAttribute="top" secondItem="VRf-O7-eLd" secondAttribute="bottom" constant="290" id="5GT-oI-wm2"/>
+                            <constraint firstItem="Fau-ny-pQf" firstAttribute="top" secondItem="VRf-O7-eLd" secondAttribute="bottom" constant="246" id="5GT-oI-wm2"/>
                             <constraint firstItem="2ag-S2-jXb" firstAttribute="top" secondItem="Fau-ny-pQf" secondAttribute="bottom" constant="58" id="WRP-ja-vSB"/>
                             <constraint firstAttribute="centerX" secondItem="Fau-ny-pQf" secondAttribute="centerX" id="rpK-jC-YhJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1nz-M7-6Ld"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mZ-QJ-J5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="415" y="276"/>
+            <point key="canvasLocation" x="1227" y="276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qij-s4-wFJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vAc-L5-dXH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W6A-uO-1x7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gcf-TB-Dkh" kind="relationship" relationship="rootViewController" id="esM-KC-UL4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ia-6g-hxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="276"/>
         </scene>
     </scenes>
 </document>

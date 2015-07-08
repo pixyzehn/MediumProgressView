@@ -15,35 +15,32 @@ class ViewController: UIViewController {
         case Stop
     }
 
-    var status: Motion?
+    var status: Motion = .Moving
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let mediumProgressViewManager = MediumProgressViewManager.sharedInstance
-        mediumProgressViewManager.position = .Top // Default is top.
-        mediumProgressViewManager.color    = UIColor(red:0.33, green:0.83, blue:0.44, alpha:1) // Default is UIColor(red:0.33, green:0.83, blue:0.44, alpha:1).
-        mediumProgressViewManager.height   = 4.0 // Default is 4.0.
-        mediumProgressViewManager.isLeft   = true // Default is true.
-        mediumProgressViewManager.duration = 1.0  // Default is 1.2.
-        
-        status = .Moving
-        mediumProgressViewManager.showProgressOnView(view)
+        mediumProgressViewManager.position      = .Top
+        mediumProgressViewManager.color         = MEDIUM_COLOR
+        mediumProgressViewManager.height        = 4.0
+        mediumProgressViewManager.isLeftToRight = true
+        mediumProgressViewManager.duration      = 1.0
+        mediumProgressViewManager.showProgress()
     }
     
     @IBAction func startProgress(sender: AnyObject) {
         if status == .Stop {
-            MediumProgressViewManager.sharedInstance.showProgressOnView(view)
+            MediumProgressViewManager.sharedInstance.showProgress()
             status = .Moving
         }
     }
 
     @IBAction func stopProgress(sender: AnyObject) {
         if status == .Moving {
-            MediumProgressViewManager.sharedInstance.hideProgressView()
+            MediumProgressViewManager.sharedInstance.hideProgress()
             status = .Stop
         }
     }
-    
 }
 
