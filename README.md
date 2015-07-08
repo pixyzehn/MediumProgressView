@@ -59,25 +59,24 @@ Add the MediumProgressView (including MediumProgressView.swift and  MediumProgre
 You can set the certain property. For example, position and color, height, duration and so on. If you don't set the these property, default value is used.
 
 ```Swift
-var mediumProgressViewManager = MediumProgressViewManager.sharedInstance
-mediumProgressViewManager.position = .Top // Default is top.
-mediumProgressViewManager?.color    = MEDIUM_PROGRESS_COLOR
-// Default is UIColor(red:0.33, green:0.83, blue:0.44, alpha:1).
-mediumProgressViewManager?.height   = 4.0 // Default is 4.0.
-mediumProgressViewManager?.isLeft   = true // Default is true.
-mediumProgressViewManager?.duration = 1.0  // Default is 1.2.
+let mediumProgressViewManager = MediumProgressViewManager.sharedInstance
+mediumProgressViewManager.position      = .Top         // Default is top.
+mediumProgressViewManager.color         = MEDIUM_COLOR // Default is UIColor(red:0.33, green:0.83, blue:0.44, alpha:1).
+mediumProgressViewManager.height        = 4.0          // Default is 4.0.
+mediumProgressViewManager.isLeftToRight = true         // Default is true.
+mediumProgressViewManager.duration      = 1.0          // Default is 1.2.
 ```
 
 The following method is show method.
 
 ```Swift
-mediumProgressViewManager.showProgressOnView(view)
+mediumProgressViewManager.showProgress()
 ```
 
 The following method is hide method.
 
 ```Swift
-mediumProgressViewManager.hideProgressView()
+mediumProgressViewManager.hideProgress()
 ```
 
 See MediumProgressView-Sample project for more information.
@@ -88,4 +87,4 @@ See MediumProgressView-Sample project for more information.
 
 ## Author
 
-[pixyzehn](https://github.com/pixyzehn)
+[pixyzehn](https://github.com/pixyzehn)🐈
