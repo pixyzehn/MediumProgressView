@@ -152,10 +152,9 @@
 				6EE89E271AB6EB4D0030119A /* MediumProgressView */,
 				6E08A7981A88E8B200F6093C /* AppDelegate.swift */,
 				6E08A79A1A88E8B200F6093C /* ViewController.swift */,
-				6E08A79F1A88E8B200F6093C /* Images.xcassets */,
-				6E08A7A11A88E8B200F6093C /* LaunchScreen.xib */,
-				6E08A7961A88E8B200F6093C /* Supporting Files */,
 				6E08A7BF1A88EA1800F6093C /* Main.storyboard */,
+				6E08A79F1A88E8B200F6093C /* Images.xcassets */,
+				6E08A7961A88E8B200F6093C /* Supporting Files */,
 			);
 			path = "MediumProgressView-Sample";
 			sourceTree = "<group>";
@@ -163,6 +162,7 @@
 		6E08A7961A88E8B200F6093C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E08A7A11A88E8B200F6093C /* LaunchScreen.xib */,
 				6E08A7971A88E8B200F6093C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -718,6 +718,7 @@
 				6EB8CCC51AF88619002EB5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EB8CCCA1AF88619002EB5DD /* Build configuration list for PBXNativeTarget "MediumProgressViewTests" */ = {
 			isa = XCConfigurationList;
@@ -726,6 +727,7 @@
 				6EB8CCC71AF88619002EB5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,32 +8,47 @@
 
 import UIKit
 
+protocol MediumProgressViewDelegate {
+    func finishedAnimation()
+}
+
 public class MediumProgressView: UIView {
+    var delegate: MediumProgressViewDelegate?
  
-    override public init(frame: CGRect) {
+    override private init(frame: CGRect) {
         super.init(frame: frame)
     }
  
-    convenience public init(frame: CGRect, isLeftToRight: Bool, duration: CFTimeInterval) {
+    convenience internal init(frame: CGRect,
+                      isLeftToRight: Bool,
+                           duration: CFTimeInterval,
+                        repeatCount: Float) {
         self.init(frame: frame)
-        initialize(isLeftToRight, duration: duration)
+        progressAnimation(isLeftToRight, duration: duration, repeatCount: repeatCount)
     }
 
     required public init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        fatalError("init(coder:) has not been implemented")
     }
  
-    private func initialize(isLeftToRight: Bool, duration: CFTimeInterval) {
-        layer.addAnimation(mediumProgressAnimation(isLeftToRight, duration: duration), forKey: "animation")
-    }
+    private func progressAnimation(isLeftToRight: Bool, duration: CFTimeInterval, repeatCount: Float) {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock{ [unowned self] in
+            let animation = self.layer.animationForKey("progressAnimation")
+            if animation != nil {
+                self.layer.removeAnimationForKey("progressAnimation")
+                self.delegate?.finishedAnimation()
+            }
+        }
 
-    private func mediumProgressAnimation(isLeftToRight: Bool, duration: CFTimeInterval) -> CAAnimation {
         let animation: CABasicAnimation = CABasicAnimation(keyPath: "position.x")
-        animation.fromValue   = isLeftToRight ? -frame.size.width : frame.size.width * 2
-        animation.toValue     = isLeftToRight ? frame.size.width * 2 : -frame.size.width
-        animation.duration    = duration
-        animation.fillMode    = kCAFillModeBoth
-        animation.repeatCount = Float.infinity
-        return animation
+        animation.fromValue           = isLeftToRight ? -frame.size.width : frame.size.width * 2
+        animation.toValue             = isLeftToRight ? frame.size.width * 2 : -frame.size.width
+        animation.duration            = duration
+        animation.fillMode            = kCAFillModeBoth
+        animation.removedOnCompletion = false
+        animation.repeatCount         = repeatCount
+        layer.addAnimation(animation, forKey: "progressAnimation")
+        CATransaction.commit()
     } 
 }
