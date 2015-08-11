@@ -1,6 +1,8 @@
 MediumProgressView
 ====================
 
+[![Circle CI](https://circleci.com/gh/pixyzehn/MediumProgressView/tree/master.svg?style=svg)](https://circleci.com/gh/pixyzehn/MediumProgressView/tree/master)
+
 Medium Progress View in Swift like a Medium Web application Progress View.
 
 Inspired by [KIProgressView](https://github.com/kaiinui/KIProgressView). I made that a reference and customized a fine point.
