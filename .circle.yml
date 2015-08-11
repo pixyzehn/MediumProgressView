@@ -1,6 +1,6 @@
 machine:
   environment:
-    XCODE_SCHEME: MediumProgressView
+      XCODE_SCHEME: MediumProgressView-Sample
 dependencies:
   override:
     - pod install:
