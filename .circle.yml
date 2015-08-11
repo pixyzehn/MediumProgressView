@@ -1,0 +1,7 @@
+machine:
+  environment:
+    XCODE_SCHEME: MediumProgressView
+dependencies:
+  override:
+    - pod install:
+        timeout: 300
