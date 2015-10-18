@@ -59,7 +59,6 @@ public class MediumProgressViewManager {
                 newFrame = CGRectMake(0, 0, width, self.height!)
             case .Bottom:
                 newFrame = CGRectMake(0, height - self.height!, width, self.height!)
-            default: break
         }
         let progressView = MediumProgressView(frame: newFrame,
                                       isLeftToRight: isLeftToRight!,
