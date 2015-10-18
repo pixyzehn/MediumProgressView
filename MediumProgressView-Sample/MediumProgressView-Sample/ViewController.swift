@@ -10,21 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var progressViewManager: MediumProgressViewManager!
+    var progressViewManager: MediumProgressViewManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         progressViewManager = MediumProgressViewManager.sharedInstance
-        progressViewManager.show()
+        progressViewManager?.show()
     }
     
     @IBAction func startProgress(sender: AnyObject) {
-        progressViewManager.show()
+        progressViewManager?.show()
     }
 
     @IBAction func stopProgress(sender: AnyObject) {
-        progressViewManager.hide()
+        progressViewManager?.hide()
     }
 }
 

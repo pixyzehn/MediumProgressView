@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol MediumProgressViewDelegate {
-    func finishedAnimation()
+protocol MediumProgressViewDelegate: class {
+    func mediumProgressViewDidFinishAnimation(view: MediumProgressView)
 }
 
 public class MediumProgressView: UIView {
-    var delegate: MediumProgressViewDelegate?
+    weak var delegate: MediumProgressViewDelegate?
  
     override private init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,22 +22,27 @@ public class MediumProgressView: UIView {
     convenience internal init(frame: CGRect,
                       isLeftToRight: Bool,
                            duration: CFTimeInterval,
-                        repeatCount: Float) {
+                        repeatCount: Float)
+    {
         self.init(frame: frame)
+
         progressAnimation(isLeftToRight, duration: duration, repeatCount: repeatCount)
     }
 
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
  
     private func progressAnimation(isLeftToRight: Bool, duration: CFTimeInterval, repeatCount: Float) {
         CATransaction.begin()
-        CATransaction.setCompletionBlock{ [unowned self] in
-            let animation = self.layer.animationForKey("progressAnimation")
+
+        CATransaction.setCompletionBlock{ [weak self] in
+            let animation = self?.layer.animationForKey("progressAnimation")
             if animation != nil {
-                self.layer.removeAnimationForKey("progressAnimation")
-                self.delegate?.finishedAnimation()
+                self?.layer.removeAnimationForKey("progressAnimation")
+                if self != nil {
+                    self?.delegate?.mediumProgressViewDidFinishAnimation(self!)
+                }
             }
         }
 

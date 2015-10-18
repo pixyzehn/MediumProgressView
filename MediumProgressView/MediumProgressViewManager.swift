@@ -8,12 +8,11 @@
 
 import UIKit
 
-let MEDIUM_COLOR = UIColor(red:0.33, green:0.83, blue:0.44, alpha:1)
+public let MEDIUM_COLOR = UIColor(red:0.33, green:0.83, blue:0.44, alpha:1)
 
 public class MediumProgressViewManager {
     public enum Position {
-        case Top
-        case Bottom
+        case Top, Bottom
     }
     
     public var position: Position?
@@ -23,7 +22,7 @@ public class MediumProgressViewManager {
     public var duration: CFTimeInterval?
     public var repeatCount: Float?
     
-    public var progressView: MediumProgressView!
+    public var progressView: MediumProgressView?
     
     public init() {
         self.position      = .Top
@@ -39,28 +38,36 @@ public class MediumProgressViewManager {
     // MARK: function
     
     public func show() {
-        let window = UIApplication.sharedApplication().keyWindow!
-        progressView = initializeViewWithFrame(window.frame)
-        window.addSubview(progressView)
+        if progressView == nil {
+            let window = UIApplication.sharedApplication().keyWindow!
+            progressView = createMediumProgressView(window.frame)
+            window.addSubview(progressView!)
+        }
     }
     
     public func hide() {
-        progressView.removeFromSuperview()
+        progressView?.removeFromSuperview()
+        progressView = nil
     }
     
     // MARK: Helpers
     
-    private func initializeViewWithFrame(frame: CGRect) -> MediumProgressView {
-        let width = frame.size.width
-        let height = frame.size.height
-        var newFrame = CGRectZero
-        switch position! {
-            case .Top:
-                newFrame = CGRectMake(0, 0, width, self.height!)
-            case .Bottom:
-                newFrame = CGRectMake(0, height - self.height!, width, self.height!)
-            default: break
+    private func createMediumProgressView(frame: CGRect) -> MediumProgressView {
+        guard let position = position, height = height else {
+            return MediumProgressView()
         }
+        
+        let newWidth  = frame.size.width
+        let newHeight = frame.size.height
+        let newFrame: CGRect
+
+        switch position {
+            case .Top:
+                newFrame = CGRectMake(0, 0, newWidth, height)
+            case .Bottom:
+                newFrame = CGRectMake(0, newHeight - height, newWidth, height)
+        }
+
         let progressView = MediumProgressView(frame: newFrame,
                                       isLeftToRight: isLeftToRight!,
                                            duration: duration!,
@@ -69,11 +76,10 @@ public class MediumProgressViewManager {
         progressView.backgroundColor = color
         return progressView
     }
-
 }
 
 extension MediumProgressViewManager: MediumProgressViewDelegate {
-    func finishedAnimation() {
+    func mediumProgressViewDidFinishAnimation(view: MediumProgressView) {
         hide()
     }
 }
