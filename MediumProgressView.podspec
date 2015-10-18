@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "MediumProgressView"
-  s.version = "1.0.6"
+  s.version = "1.0.7"
   s.summary = "A progress view based on Medium web app."
   s.homepage = 'https://github.com/pixyzehn/MediumProgressView'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
