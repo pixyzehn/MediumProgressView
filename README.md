@@ -13,7 +13,7 @@ Inspired by [KIProgressView](https://github.com/kaiinui/KIProgressView). I made 
 
 ##Installation
 
-###Cocoapods
+###CocoaPods
 
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Add the following line to your Podfile:
 
