@@ -9,13 +9,13 @@
 import UIKit
 
 protocol MediumProgressViewDelegate: class {
-    func mediumProgressViewDidFinishAnimation(view: MediumProgressView)
+    func mediumProgressViewDidFinishAnimation(_ view: MediumProgressView)
 }
 
-public class MediumProgressView: UIView {
+open class MediumProgressView: UIView {
     weak var delegate: MediumProgressViewDelegate?
  
-    override private init(frame: CGRect) {
+    override fileprivate init(frame: CGRect) {
         super.init(frame: frame)
     }
  
@@ -33,13 +33,13 @@ public class MediumProgressView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
  
-    private func progressAnimation(isLeftToRight: Bool, duration: CFTimeInterval, repeatCount: Float) {
+    fileprivate func progressAnimation(_ isLeftToRight: Bool, duration: CFTimeInterval, repeatCount: Float) {
         CATransaction.begin()
 
         CATransaction.setCompletionBlock{ [weak self] in
-            let animation = self?.layer.animationForKey("progressAnimation")
+            let animation = self?.layer.animation(forKey: "progressAnimation")
             if animation != nil {
-                self?.layer.removeAnimationForKey("progressAnimation")
+                self?.layer.removeAnimation(forKey: "progressAnimation")
                 if self != nil {
                     self?.delegate?.mediumProgressViewDidFinishAnimation(self!)
                 }
@@ -51,9 +51,9 @@ public class MediumProgressView: UIView {
         animation.toValue             = isLeftToRight ? frame.size.width * 2 : -frame.size.width
         animation.duration            = duration
         animation.fillMode            = kCAFillModeBoth
-        animation.removedOnCompletion = false
+        animation.isRemovedOnCompletion = false
         animation.repeatCount         = repeatCount
-        layer.addAnimation(animation, forKey: "progressAnimation")
+        layer.add(animation, forKey: "progressAnimation")
         CATransaction.commit()
     } 
 }
