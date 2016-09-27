@@ -1,6 +1,9 @@
 MediumProgressView
 ====================
 
+![Swift3.0](https://img.shields.io/badge/Swift-3.0-blue.svg?style=flat)
+[![Build Status](https://travis-ci.org/pixyzehn/MediumProgressView.svg?branch=master)](https://travis-ci.org/pixyzehn/MediumProgressView)
+
 Medium Progress View in Swift like a Medium Web application Progress View.
 
 Inspired by [KIProgressView](https://github.com/kaiinui/KIProgressView). I made that a reference and customized a fine point.
