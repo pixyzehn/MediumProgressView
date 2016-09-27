@@ -12,26 +12,19 @@ public let MEDIUM_COLOR = UIColor(red:0.33, green:0.83, blue:0.44, alpha:1)
 
 open class MediumProgressViewManager {
     public enum Position {
-        case top, bottom
+        case top
+        case bottom
     }
     
-    open var position: Position?
-    open var color: UIColor?
-    open var height: CGFloat?
-    open var isLeftToRight: Bool?
-    open var duration: CFTimeInterval?
-    open var repeatCount: Float?
-    
+    open var position: Position = .top
+    open var color: UIColor = MEDIUM_COLOR
+    open var height: CGFloat = 4.0
+    open var isLeftToRight: Bool = true
+    open var duration: CFTimeInterval = 1.2
+    open var repeatCount = Float.infinity
     open var progressView: MediumProgressView?
     
-    public init() {
-        self.position      = .top
-        self.color         = MEDIUM_COLOR
-        self.height        = 4.0
-        self.isLeftToRight = true
-        self.duration      = 1.2
-        self.repeatCount   = Float.infinity
-    }
+    public init() {}
 
     open static let sharedInstance = MediumProgressViewManager()
 
@@ -53,10 +46,6 @@ open class MediumProgressViewManager {
     // MARK: Helpers
     
     fileprivate func createMediumProgressView(_ frame: CGRect) -> MediumProgressView {
-        guard let position = position, let height = height else {
-            return MediumProgressView()
-        }
-        
         let newWidth  = frame.size.width
         let newHeight = frame.size.height
         let newFrame: CGRect
@@ -68,10 +57,12 @@ open class MediumProgressViewManager {
                 newFrame = CGRect(x: 0, y: newHeight - height, width: newWidth, height: height)
         }
 
-        let progressView = MediumProgressView(frame: newFrame,
-                                      isLeftToRight: isLeftToRight!,
-                                           duration: duration!,
-                                        repeatCount: repeatCount!)
+        let progressView = MediumProgressView(
+            frame: newFrame,
+            isLeftToRight: isLeftToRight,
+            duration: duration,
+            repeatCount: repeatCount
+        )
         progressView.delegate = self
         progressView.backgroundColor = color
         return progressView

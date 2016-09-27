@@ -19,13 +19,13 @@ open class MediumProgressView: UIView {
         super.init(frame: frame)
     }
  
-    convenience internal init(frame: CGRect,
-                      isLeftToRight: Bool,
-                           duration: CFTimeInterval,
-                        repeatCount: Float)
-    {
+    convenience internal init(
+        frame: CGRect,
+        isLeftToRight: Bool,
+        duration: CFTimeInterval,
+        repeatCount: Float
+    ) {
         self.init(frame: frame)
-
         progressAnimation(isLeftToRight, duration: duration, repeatCount: repeatCount)
     }
 
@@ -37,22 +37,21 @@ open class MediumProgressView: UIView {
         CATransaction.begin()
 
         CATransaction.setCompletionBlock{ [weak self] in
-            let animation = self?.layer.animation(forKey: "progressAnimation")
+            guard let strongSelf = self else { return }
+            let animation = strongSelf.layer.animation(forKey: "progressAnimation")
             if animation != nil {
-                self?.layer.removeAnimation(forKey: "progressAnimation")
-                if self != nil {
-                    self?.delegate?.mediumProgressViewDidFinishAnimation(self!)
-                }
+                strongSelf.layer.removeAnimation(forKey: "progressAnimation")
+                strongSelf.delegate?.mediumProgressViewDidFinishAnimation(strongSelf)
             }
         }
 
         let animation: CABasicAnimation = CABasicAnimation(keyPath: "position.x")
-        animation.fromValue           = isLeftToRight ? -frame.size.width : frame.size.width * 2
-        animation.toValue             = isLeftToRight ? frame.size.width * 2 : -frame.size.width
-        animation.duration            = duration
-        animation.fillMode            = kCAFillModeBoth
+        animation.fromValue = isLeftToRight ? -frame.size.width : frame.size.width * 2
+        animation.toValue = isLeftToRight ? frame.size.width * 2 : -frame.size.width
+        animation.duration = duration
+        animation.fillMode = kCAFillModeBoth
         animation.isRemovedOnCompletion = false
-        animation.repeatCount         = repeatCount
+        animation.repeatCount = repeatCount
         layer.add(animation, forKey: "progressAnimation")
         CATransaction.commit()
     } 
