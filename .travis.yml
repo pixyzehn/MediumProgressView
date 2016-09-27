@@ -1,3 +1,5 @@
 osx_image: xcode8
 language: objective-c
-xcode_scheme: MediumProgressView
+install: gem install xcpretty
+script: xcodebuild -project MediumProgressView-Sample/MediumProgressView-Sample.xcodeproj -scheme MediumProgressView | xcpretty --color; exit ${PIPESTATUS[0]}
+
