@@ -19,11 +19,11 @@ class ViewController: UIViewController {
         progressViewManager?.show()
     }
     
-    @IBAction func startProgress(sender: AnyObject) {
+    @IBAction func startProgress(_ sender: AnyObject) {
         progressViewManager?.show()
     }
 
-    @IBAction func stopProgress(sender: AnyObject) {
+    @IBAction func stopProgress(_ sender: AnyObject) {
         progressViewManager?.hide()
     }
 }
