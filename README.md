@@ -1,8 +1,6 @@
 MediumProgressView
 ====================
 
-[![Circle CI](https://circleci.com/gh/pixyzehn/MediumProgressView/tree/master.svg?style=svg)](https://circleci.com/gh/pixyzehn/MediumProgressView/tree/master)
-
 Medium Progress View in Swift like a Medium Web application Progress View.
 
 Inspired by [KIProgressView](https://github.com/kaiinui/KIProgressView). I made that a reference and customized a fine point.
@@ -43,7 +41,7 @@ $ brew install carthage
 
 To integrate MediumProgressView into your Xcode project using Carthage, specify it in your `Cartfile`:
 
-```ogdl
+```
 github "pixyzehn/MediumProgressView"
 ```
 
@@ -52,6 +50,7 @@ Run `carthage update`.
 ```bash
 $ carthage update
 ```
+
 ###Other
 
 Add the MediumProgressView (including MediumProgressView.swift and  MediumProgressViewManager.swift) folder into your project.
@@ -62,12 +61,12 @@ You can set the certain property. For example, position and color, height, durat
 
 ```Swift
 let progressViewManager = MediumProgressViewManager.sharedInstance
-progressViewManager.position      = .Bottom            // Default is top.
-progressViewManager.color         = UIColor.redColor() // Default is UIColor(red:0.33, green:0.83, blue:0.44, alpha:1).
-progressViewManager.height        = 2.0                // Default is 4.0.
-progressViewManager.isLeftToRight = false              // Default is true.
-progressViewManager.duration      = 2.0                // Default is 1.2.
-progressViewManager.repeatCount   = 3                  // Default is infinity.
+progressViewManager.position = .bottom    // Default is top.
+progressViewManager.color = UIColor.red   // Default is UIColor(red:0.33, green:0.83, blue:0.44, alpha:1).
+progressViewManager.height = 2.0          // Default is 4.0.
+progressViewManager.isLeftToRight = false // Default is true.
+progressViewManager.duration = 2.0        // Default is 1.2.
+progressViewManager.repeatCount = 3       // Default is infinity.
 ```
 
 The following method is show method.
