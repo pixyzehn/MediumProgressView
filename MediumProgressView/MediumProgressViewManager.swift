@@ -14,6 +14,7 @@ open class MediumProgressViewManager {
     public enum Position {
         case top
         case bottom
+        case center
     }
     
     open var position: Position = .top
@@ -38,6 +39,13 @@ open class MediumProgressViewManager {
         }
     }
     
+    open func show(on view: UIView) {
+        if progressView == nil {
+            progressView = createMediumProgressView(view.frame)
+            view.addSubview(progressView!)
+        }
+    }
+    
     open func hide() {
         progressView?.removeFromSuperview()
         progressView = nil
@@ -55,6 +63,8 @@ open class MediumProgressViewManager {
                 newFrame = CGRect(x: 0, y: 0, width: newWidth, height: height)
             case .bottom:
                 newFrame = CGRect(x: 0, y: newHeight - height, width: newWidth, height: height)
+            case .center:
+                newFrame = CGRect(x: 0, y: (newHeight - height)/2, width: newWidth, height: height)
         }
 
         let progressView = MediumProgressView(
