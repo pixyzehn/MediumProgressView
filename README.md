@@ -1,3 +1,5 @@
+**Notice: MediumProgressView is no longer being maintained/updated.**
+
 MediumProgressView
 ====================
 
@@ -12,9 +14,9 @@ Inspired by [KIProgressView](https://github.com/kaiinui/KIProgressView). I made 
 
 ![MediumProgressView](https://github.com/pixyzehn/MediumProgressView/blob/master/Assets/MediumProgressView.gif)
 
-##Installation
+## Installation
 
-###CocoaPods
+### CocoaPods
 
 The easiest way to get started is to use [CocoaPods](http://cocoapods.org/). Add the following line to your Podfile:
 
@@ -31,7 +33,7 @@ Then, run the following command:
 pod install
 ```
 
-###Carthage
+### Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
 
@@ -54,7 +56,7 @@ Run `carthage update`.
 $ carthage update
 ```
 
-###Other
+### Other
 
 Add the MediumProgressView (including MediumProgressView.swift and  MediumProgressViewManager.swift) folder into your project.
 
